@@ -7,13 +7,11 @@ import bb from 'express-busboy';
 import SourceMapSupport from 'source-map-support';
 import todoRoutes from './routes/todo.server.route';
 
-const port = process.env.PORT || 3001;
+const port = process.env.PORT || 4000;
 const app = express();
 
 mongoose.Promise = global.Promise;
-mongoose.connect('mongodb://localhost/mern-todo-app', {
-  useMongoClient: true,
-});
+mongoose.connect('mongodb://localhost:3001/meteor', { useNewUrlParser: true });
 
 app.use(logger('dev'));
 app.use(bodyParser.json());
