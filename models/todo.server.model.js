@@ -10,4 +10,4 @@ const Schema = mongoose.Schema({
   owner: String,
 });
 
-export default mongoose.model('Todo', Schema);
+export default mongoose.model('Todo', Schema, 'tasks');
