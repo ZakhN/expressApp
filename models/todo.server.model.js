@@ -5,7 +5,9 @@ const Schema = mongoose.Schema({
     type: Date,
     default: Date.now,
   },
-  fullName: String,
-  todoText: String,
+  username: String,
+  text: String,
+  owner: String,
 });
+
 export default mongoose.model('Todo', Schema);

@@ -29,11 +29,10 @@ app.use((req, res, next) => {
 
 SourceMapSupport.install();
 app.use('/api', todoRoutes);
-app.get('/', (req, res) => {
-  return res.end('Api working');
-});
+app.get('/', (req, res) => res.end('Api working'));
+
 // catch 404
-app.use((req, res, next) => {
+app.use((req, res) => {
   res.status(404).send('<h2 align=center>Page Not Found!</h2>');
 });
 
