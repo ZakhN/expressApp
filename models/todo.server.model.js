@@ -1,4 +1,5 @@
 import mongoose from 'mongoose';
+import uniqid from 'uniqid';
 
 const Schema = mongoose.Schema({
   createdAt: {
