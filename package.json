@@ -17,7 +17,8 @@
     "express-busboy": "^7.0.0",
     "mongoose": "^5.2.5",
     "morgan": "^1.9.0",
-    "source-map-support": "^0.5.6"
+    "source-map-support": "^0.5.6",
+    "uniqid": "^5.0.3"
   },
   "devDependencies": {
     "eslint": "^5.2.0",

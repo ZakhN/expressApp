@@ -6,7 +6,6 @@ const router = express.Router();
 router.route('/:id')
   .get(todoController.getTodo)
   .delete(todoController.deleteTodo);
-
 router.route('/')
   .get(todoController.getTodos)
   .post(todoController.addTodo)
