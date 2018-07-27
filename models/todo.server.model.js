@@ -8,6 +8,11 @@ const Schema = mongoose.Schema({
   username: String,
   text: String,
   owner: String,
+  checked: Boolean,
+  _id: {
+    type: String,
+    default: uniqid,
+  },
 });
 
 export default mongoose.model('Todo', Schema, 'tasks');

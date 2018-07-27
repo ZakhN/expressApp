@@ -4,6 +4,7 @@ export const addTodo = (req, res) => {
   const newTodo = new Todo(req.body);
   newTodo.save((err, todo) => {
     if (err) {
+      console.log(err);
       return res.json({ success: false, message: 'Some Error' });
     }
     return res.json({ success: true, message: 'Todo added successfully', todo });
@@ -19,6 +20,7 @@ export const getTodos = (req, res) => {
   });
 };
 
+
 export const updateTodo = (req, res) => {
   Todo.findOneAndUpdate({ _id: req.body.id }, req.body, { new: true }, (err, todo) => {
     if (err) {
@@ -28,6 +30,7 @@ export const updateTodo = (req, res) => {
     return res.json({ success: true, message: 'Updated successfully', todo });
   });
 };
+
 
 export const getTodo = (req, res) => {
   Todo.find({ _id: req.params.id }).exec((err, todo) => {
