@@ -1,1 +1,1 @@
-web: node app_hooked.js
+web: node app.js
