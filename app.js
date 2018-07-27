@@ -11,7 +11,7 @@ const port = process.env.PORT || 4000;
 const app = express();
 
 mongoose.Promise = global.Promise;
-mongoose.connect('mongodb://localhost:3001/meteor', { useNewUrlParser: true });
+mongoose.connect(process.env.MONGODB_URI, { useNewUrlParser: true });
 
 app.use(logger('dev'));
 app.use(bodyParser.json());
